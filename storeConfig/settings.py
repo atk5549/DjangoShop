@@ -137,26 +137,16 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # sending email to local console
-
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
 # sending email via smtp.yandex.ru (https://yandex.ru/support/mail/mail-clients/others.html)
-
-
-# Входящая почта
-#
-#         адрес почтового сервера — imap.yandex.ru;
-#         защита соединения — SSL;
-#         порт — 993.
-#
+# 1 - Разрешить доступ к почтовому ящику с помощью почтовых клиентов
+# 2 - Создайте пароль приложения и используйте его т.к. основной пароль не подойдет в целях безопасности
 # Исходящая почта
-#
-#         адрес почтового сервера — smtp.yandex.ru;
-#         защита соединения — SSL;
-#         порт — 465.
-
+# адрес почтового сервера — smtp.yandex.ru;
+# защита соединения — SSL;
+# порт — 465.
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'shop-helpers@yandex.ru'
-EMAIL_HOST_PASSWORD = '8vbzq4l9!!!'
+EMAIL_HOST_PASSWORD = 'vqatjibteqiefswz'
 EMAIL_USE_SSL = True
