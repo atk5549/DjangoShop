@@ -83,12 +83,21 @@ WSGI_APPLICATION = 'storeConfig.wsgi.application'
 #     }
 # }
 
+# sudo mkdir -p /etc/paths.d &&
+# echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+
+# CREATE DATABASE store_db;
+# CREATE ROLE atk5549 with password '8vbzq4l9!!!';
+# ALTER ROLE atk5549 WITH LOGIN;
+# GRANT ALL PRIVILEGES ON DATABASE store_db to atk5549
+# ALTER USER atk5549 CREATEDB;
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "mydatabase",
-        "USER": "mydatabaseuser",
-        "PASSWORD": "mypassword",
+        "NAME": "store_db",
+        "USER": "atk5549",
+        "PASSWORD": "8vbzq4l9!!!",
         "HOST": "127.0.0.1",
         "PORT": "5432",
     }
